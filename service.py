@@ -142,7 +142,10 @@ with placeholder.container():
     num1 = st.number_input("Общий баланс средств:")
     num2 = st.number_input("Ежемесячный доход:")
     num23 = st.number_input("Ежемесячные расходы:")
-    num3 = num23 / num2
+    if num2 != 1:
+        num3 = num23 / num2
+    else:
+        num3 = num23 / 1
     num4 = st.number_input("Количество открытых кредитных продуктов (кредитов, кредитных карт и т.д):")
     num5 = st.number_input("Количество иждивенцев на попечении (супруги, дети и др):")
 
